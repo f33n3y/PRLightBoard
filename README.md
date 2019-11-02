@@ -10,3 +10,6 @@ You will need to obtain a [personal access token](https://docs.microsoft.com/azu
 personal_access_token = '{your_personal_access_token}'
 organization_url = '{your_organization_url}'
 ```
+## Status
+
+Pre-alpha
