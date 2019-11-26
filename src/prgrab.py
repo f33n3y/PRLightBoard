@@ -2,6 +2,13 @@ from azure.devops.connection import Connection
 from msrest.authentication import BasicAuthentication
 from azure.devops.v5_1.git.models import GitPullRequestSearchCriteria
 
+try:
+    import unicornhathd as unicorn
+    print("unicorn hat hd detected")
+except ImportError:
+    from unicorn_hat_sim import unicornhathd as unicorn
+    print("falling back to unicorn hat hd sim")
+
 # Setup connection to AzureDevOps
 personal_access_token = 'xxx'
 organization_url = 'https://dev.azure.com/xxx'
@@ -34,3 +41,14 @@ for project in projects_list:
     total_prs_count += len(projects_pull_requests)
 
 print("Total PRs: " + str(total_prs_count))
+
+# TESTING...
+unicorn.rotation(90)
+unicorn.brightness(0.6)
+
+try:
+    while True:
+        unicorn.set_pixel(15, 15, 255, 0, 0)
+        unicorn.show()
+except KeyboardInterrupt:
+    unicorn.off()
